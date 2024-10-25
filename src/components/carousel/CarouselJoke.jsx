@@ -18,11 +18,11 @@ const CarouselJoke = () => {
     if (data.text && data.text.length <= 100) {
       setJoke(data.text);
     } else {
-      // fetchJoke();
+      fetchJoke();
     }
   };
   useEffect(() => {
-    // fetchJoke();
+    fetchJoke();
   }, []);
   return (
     <div className="recipe-Joke">

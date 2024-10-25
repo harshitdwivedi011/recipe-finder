@@ -22,9 +22,9 @@ const GetRecipeDetails = () => {
   };
 
   useEffect(() => {
-    // getRecipeDetails(id, setLoader, setRecipeDetails);
-    // fetchNutritionByID(id, setNutritions);
-    // getSimilarRecipe(id, setSimilarRecipe);
+    getRecipeDetails(id, setLoader, setRecipeDetails);
+    fetchNutritionByID(id, setNutritions);
+    getSimilarRecipe(id, setSimilarRecipe);
   }, [id]);
 
   return loader ? (

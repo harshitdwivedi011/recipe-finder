@@ -9,7 +9,7 @@ const Sections = ({ config, recipeList }) => {
       <hr />
       <div className="recipe-list">
         {recipeList.map((recipe, index) => (
-          <Link to={`/items/explore/${recipe.id}`} key={index}>
+          <Link to={`/recipes/explore/${recipe.id}`} key={index}>
             <div className="recipe">
               <img src={recipe.image} alt="" />
               <h3>{recipe.title}</h3>

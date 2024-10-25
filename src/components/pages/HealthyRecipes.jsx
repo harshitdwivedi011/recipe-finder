@@ -7,7 +7,7 @@ const HealthyRecipes = () => {
   const [popularRecipes, setHealthyRecipeData] = useState([]);
   const [loader, setLoader] = useState(true);
   useEffect(() => {
-    // getHealthyRecipes(setLoader, setHealthyRecipeData)
+    getHealthyRecipes(setLoader, setHealthyRecipeData)
   }, []);
   return loader ? (
     <Loader />

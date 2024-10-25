@@ -11,7 +11,7 @@ const SearchResults = () => {
 
   useEffect(() => {
     if (query) {
-      // searchRecipesByQuery(query, setLoader, setSearchResults);
+      searchRecipesByQuery(query, setLoader, setSearchResults);
     }
   }, [query]);
   return (

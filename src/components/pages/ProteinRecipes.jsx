@@ -7,7 +7,7 @@ const ProteinRecipes = () => {
   const [proteinRecipes, setproteinRecipeData] = useState([]);
   const [loader, setLoader] = useState(true);
   useEffect(() => {
-    // getProteinRecipes(setLoader, setproteinRecipeData)
+    getProteinRecipes(setLoader, setproteinRecipeData)
   }, []);
   return loader ? (
     <Loader />

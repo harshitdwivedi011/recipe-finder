@@ -7,7 +7,7 @@ const PopularRecipes = () => {
   const [popularRecipes, setpopularRecipeData] = useState([]);
   const [loader, setLoader] = useState(true);
   useEffect(() => {
-    // getPopularRecipes(setLoader, setpopularRecipeData)
+    getPopularRecipes(setLoader, setpopularRecipeData)
   }, []);
   return loader ? (
     <Loader />

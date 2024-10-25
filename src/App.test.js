@@ -19,7 +19,7 @@ describe("RecipeSearch Component", () => {
     jest.clearAllMocks(); // Clear mocks before each test
   });
   test("renders search recipe title", () => {
-    render(<App />);
+    render(<RecipeSearch />);
     const searchTitle = screen.getByText(/Find Your Next Recipe/i);
     expect(searchTitle).toBeInTheDocument();
   });
@@ -62,7 +62,7 @@ describe("RecipeSearch Component", () => {
     ); // Ensure it waits for debounce time
   });
 
-  test('should display an alert if search query is less than 3 characters', () => {
+  test("should display an alert if search query is less than 3 characters", () => {
     window.alert = jest.fn(); // Mock alert
 
     render(<RecipeSearch />);
@@ -70,11 +70,11 @@ describe("RecipeSearch Component", () => {
     const inputElement = screen.getByPlaceholderText(/enter your recipe here/i);
     const buttonElement = screen.getByDisplayValue(/search/i);
 
-    fireEvent.change(inputElement, { target: { value: 'pa' } });
+    fireEvent.change(inputElement, { target: { value: "pa" } });
     fireEvent.click(buttonElement);
 
-    expect(window.alert).toHaveBeenCalledWith('Value length must be greater than 2');
+    expect(window.alert).toHaveBeenCalledWith(
+      "Value length must be greater than 2"
+    );
   });
-
-
 });
