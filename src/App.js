@@ -12,8 +12,7 @@ import ProteinRecipes from './components/pages/ProteinRecipes';
 import SearchResults from './components/pages/SearchResults';
 
 export const REACT_APP_API_PRE = 'https://api.spoonacular.com/';
-// 220a11f5d39c4ae5affcf7e2cf732b35 - new api key
-// af9706edccb149e7a0de057440264aa3 - old api key
+
 function App() {
   const [receipeListPopularity, setRecipeListPopularity] = useState([]);
   const [receipeListHealthiness, setRecipeListHealthiness] = useState([]);
