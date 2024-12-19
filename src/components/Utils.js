@@ -15,6 +15,7 @@ export const ObjectUtils = {
   },
 };
 
+// function to get the suggested recipe based on entered name
 export const getRecipeSearchResults = async (value, setSuggestions) => {
   try {
     const response = await fetch(
@@ -53,6 +54,7 @@ export const searchRecipesByQuery = async (
   }
 };
 
+// function to get Nutrition of a recipe by ID
 export const fetchNutritionByID = async (id, setNutritions) => {
   try {
     const response = await fetch(
@@ -69,6 +71,7 @@ export const fetchNutritionByID = async (id, setNutritions) => {
   }
 };
 
+//function to fetch data based on preferences and category
 export const fetchData = async (
   setRecipeListPopularity,
   setRecipeListHealthiness,
@@ -110,6 +113,7 @@ export const fetchData = async (
   }
 };
 
+// function to get recipe details
 export const getRecipeDetails = async (id, setLoader, setRecipeDetails) => {
   try {
     setLoader(true);
@@ -130,6 +134,7 @@ export const getRecipeDetails = async (id, setLoader, setRecipeDetails) => {
   }
 };
 
+// function for extracting similar recipes
 export const getSimilarRecipe = async (id, setSimilarRecipe) => {
   try {
     const response = await fetch(

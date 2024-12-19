@@ -1,69 +1,79 @@
-# Getting Started with Create React App
+# Recipe Finder Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This README provides essential information for setting up and running the Recipe Finder Application, which was built using Create React App.
 
-## Available Scripts
+## Features
+- Search recipes by name with autocomplete suggestions.
+- Trending recipes, Editor's Picks, and Protein-Packed categories.
+- Fetch and display recipe details, including nutrition information.
+- Explore similar recipes and filter based on preferences.
 
-In the project directory, you can run:
+## Getting Started
 
-### `npm start`
+### Prerequisites
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Ensure you have the following installed:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Node.js
 
-### `npm test`
+- npm (comes with Node.js)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Installation
 
-### `npm run build`
+#### Clone the repository:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- git clone <repository-url>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Navigate to the project directory:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- cd recipe-finder
 
-### `npm run eject`
+Install dependencies:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- npm install
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### Available Scripts
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- npm start
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Runs the app in development mode.
 
-## Learn More
+Open http://localhost:3000 to view it in your browser.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The page reloads automatically when you make changes.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- npm test
 
-### Code Splitting
+Launches the test runner in interactive watch mode.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- npm run build
 
-### Analyzing the Bundle Size
+Builds the app for production into the build folder.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Optimizes the build for performance and readiness for deployment.
 
-### Making a Progressive Web App
+- npm run eject
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Copies all configuration files and dependencies into your project, allowing customization.
+Note: This is irreversible.
 
 ### Deployment
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### API Utilization
+
+- Autocomplete Suggestions: Fetches top 4 recipe suggestions based on input.
+
+- Search Recipes: Retrieves recipes matching the query (up to 20 results).
+
+- Recipe Details: Provides detailed information about a selected recipe.
+
+- Nutrition Information: Displays the nutritional breakdown of a recipe.
+
+- Category-Based Recipes: Fetches recipes sorted by popularity, healthiness, or protein content.
+
+- Similar Recipes: Recommends similar recipes with batch processing for details.
 
 ### `npm run build` fails to minify
 
