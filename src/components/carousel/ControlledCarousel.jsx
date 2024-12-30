@@ -3,6 +3,9 @@ import { Carousel } from "flowbite-react";
 import "flowbite/dist/flowbite.css";
 import "../../Style.css";
 import RecipeSearch from "./RecipeSearch";
+import slide1 from '../../images/slide1.jpg'
+import slide2 from '../../images/slide2.jpg'
+import slide3 from '../../images/slide3.jpg'
 
 const ControlledCarousel = () => {
   return (
@@ -11,17 +14,17 @@ const ControlledCarousel = () => {
       <RecipeSearch />
       <Carousel>
         <img
-          src="https://flowbite.com/docs/images/carousel/carousel-1.svg"
+          src={slide1}
           alt="Slide 1"
           className="carousel-item"
         />
         <img
-          src="https://flowbite.com/docs/images/carousel/carousel-3.svg"
+          src={slide2}
           alt="Slide 2"
           className="carousel-item"
         />
         <img
-          src="https://flowbite.com/docs/images/carousel/carousel-5.svg"
+          src={slide3}
           alt="Slide 3"
           className="carousel-item"
         />

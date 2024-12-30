@@ -20,12 +20,12 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetchData(
-      setRecipeListPopularity,
-      setRecipeListHealthiness,
-      setRecipeListProtein,
-      setLoading
-    );
+    // fetchData(
+    //   setRecipeListPopularity,
+    //   setRecipeListHealthiness,
+    //   setRecipeListProtein,
+    //   setLoading
+    // );
   }, []);
   return (
     <Router>
@@ -57,11 +57,11 @@ function App() {
               </>
             }
           />
-          <Route path="/recipes/explore/:id" element={<GetRecipeDetails />} />
+          {/* <Route path="/recipes/explore/:id" element={<GetRecipeDetails />} />
           <Route path="/recipes/results/:query" element={<SearchResults />} />
           <Route path="/popularity" element={<PopularRecipes />} />
           <Route path="/healthiness" element={<HealthyRecipes />} />
-          <Route path="/protein" element={<ProteinRecipes />} />
+          <Route path="/protein" element={<ProteinRecipes />} /> */}
         </Routes>
       </div>
     </Router>

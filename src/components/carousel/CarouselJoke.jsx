@@ -28,7 +28,7 @@ const CarouselJoke = () => {
     <div className="recipe-Joke">
       <p className="joke-title">Lighten Up with This Joke!</p>
       <p className="joke-result">
-        <blockquote>{joke}</blockquote>
+        {joke}
       </p>
     </div>
   );
