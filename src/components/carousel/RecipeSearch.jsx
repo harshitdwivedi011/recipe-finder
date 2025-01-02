@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "../../Style.css";
-import CarouselJoke from "./CarouselJoke";
 import { getRecipeSearchResults } from "../Utils";
 import { useNavigate } from "react-router-dom";
 
@@ -66,7 +65,6 @@ const RecipeSearch = () => {
           )
         )}
       </div>
-      <CarouselJoke />
     </div>
   );
 };
