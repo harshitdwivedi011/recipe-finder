@@ -59,7 +59,7 @@ Note: This is irreversible.
 
 ### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+You can access the live version of the app here: [https://recipewiz.netlify.app/].
 
 ### API Utilization
 

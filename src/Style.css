@@ -36,7 +36,7 @@
   font-weight: 700;
 
   h3 {
-    font-size: 30px;
+    font-size: 42px;
     text-align: center;
     margin: 0;
     font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
@@ -50,8 +50,9 @@
     justify-content: center;
     align-items: center; 
     flex-direction: row; 
-    gap: 1rem; /* Add spacing between elements */
+    gap: 20px; /* Add spacing between elements */
     text-align: center;
+    position: relative;
 
     input[type="text"] {
       width: 40%;
@@ -60,7 +61,6 @@
       border: none;
       margin-right: 5px;
       border-radius: 5px;
-      color: #333;
       background-color: #333;
 
       &::placeholder {
@@ -176,7 +176,7 @@ input[type="submit"] {
   position: relative;
   top: 2.5rem;
   width: 30%;
-  margin: 0 auto;
+  margin-left: 1rem;
 }
 
 .recipe-list {
@@ -608,43 +608,102 @@ li {
 
 .autocomplete-suggestions {
   position: absolute;
-  top: 100%;
-  left: 0;
-  width: 66.5%;
-  right: 0;
-  background-color: white;
+  top: calc(100% + 4px); /* Small gap below input */
+  left: 0; /* Align with input field */
+  width: 100%; /* Match input field width */
+  background: #fff;
   border: 1px solid #ccc;
   border-radius: 4px;
-  max-height: 200px;
-  overflow-y: auto;
-  z-index: 10;
-  margin-top: 5px;
-  padding: 0;
   list-style: none;
+  padding: 0;
+  margin: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .autocomplete-suggestions li {
   padding: 10px;
   cursor: pointer;
   font-size: 16px;
-  transition: background-color 0.3s;
   color: #333;
 }
 
 .autocomplete-suggestions li:hover {
-  background-color: #f0f0f0;
+  background-color: #f1f1f1;
 }
 
 .no-matches {
-  padding: 10px;
-  text-align: center;
-  font-size: 16px;
-  width: 66.5%;
-  color: #888;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 40%; /* Match input field width */
   background-color: white;
   border: 1px solid #ccc;
-  border-radius: 4px;
-  margin-top: 5px;
+  border-radius: 5px;
+  z-index: 10;
+  padding: 10px;
+  color: #999;
+  font-style: italic;
+  text-align: center;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For smaller screens (up to 480px) */
+@media (max-width: 480px) {
+  .autocomplete-suggestions {
+    width: 90%;
+    left: 5%; /* Center the suggestions */
+    max-height: 150px; /* Reduce height for smaller devices */
+  }
+
+  .autocomplete-suggestions li {
+    font-size: 14px; /* Slightly smaller font for better readability */
+    padding: 8px 12px; /* Adjust padding for smaller screens */
+  }
+
+  .no-matches {
+    font-size: 14px; /* Smaller text for consistency */
+    width: 90%; /* Match suggestions width */
+    left: 5%;
+  }
+}
+
+@media (max-width: 768px) {
+  .autocomplete-suggestions {
+    width: 80%; /* Adjust width for tablets */
+    left: 10%; /* Center the suggestions */
+  }
+
+  .autocomplete-suggestions li {
+    font-size: 15px; /* Slightly smaller font for medium screens */
+    padding: 9px 13px; /* Adjust padding for medium screens */
+  }
+
+  .no-matches {
+    font-size: 15px;
+    width: 80%;
+    left: 10%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .autocomplete-suggestions {
+    left: 20%;
+    width: 60%;
+    max-height: 250px; /* Increase height for larger screens */
+  }
+
+  .autocomplete-suggestions li {
+    font-size: 18px; /* Larger font for bigger screens */
+    padding: 12px 18px; /* More spacing for better UX */
+  }
+
+  .no-matches {
+    font-size: 18px;
+    width: 60%; /* Match parent width */
+    left: 20%;
+  }
 }
 
 h2.sub-title {
@@ -667,4 +726,42 @@ h2.sub-title {
   .recipe-card-title {
     font-size: medium; /* Adjust font size */
   }
+}
+
+.footer {
+  background-color: #111213;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.footer-links{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.footer-links a {
+  color: #ecf0f1;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 18px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-links {
+  margin-top: 10px;
+}
+
+.footer-info {
+  margin-top: 20px;
+  font-size: 14px;
 }

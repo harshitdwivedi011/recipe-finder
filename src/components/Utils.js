@@ -19,7 +19,7 @@ export const ObjectUtils = {
 export const getRecipeSearchResults = async (value, setSuggestions) => {
   try {
     const response = await fetch(
-      `https://api.spoonacular.com/recipes/autocomplete?number=4&query=${value}&apiKey=${process.env.REACT_APP_API_KEY}`
+      `https://api.spoonacular.com/recipes/autocomplete?number=3&query=${value}&apiKey=${process.env.REACT_APP_API_KEY}`
     );
     if (!response.ok) {
       throw new Error("Failed to fetch Suggestions...");

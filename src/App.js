@@ -10,6 +10,7 @@ import PopularRecipes from "./components/pages/PopularRecipes";
 import HealthyRecipes from "./components/pages/HealthyRecipes";
 import ProteinRecipes from "./components/pages/ProteinRecipes";
 import SearchResults from "./components/pages/SearchResults";
+import Footer from "./components/Footer";
 
 export const REACT_APP_API_PRE = "https://api.spoonacular.com/";
 
@@ -63,6 +64,7 @@ function App() {
           <Route path="/healthiness" element={<HealthyRecipes />} />
           <Route path="/protein" element={<ProteinRecipes />} />
         </Routes>
+        <Footer/>
       </div>
     </Router>
   );
