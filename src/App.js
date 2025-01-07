@@ -64,7 +64,7 @@ function App() {
           <Route path="/healthiness" element={<HealthyRecipes />} />
           <Route path="/protein" element={<ProteinRecipes />} />
         </Routes>
-        <Footer/>
+        {loading ? <Loader /> : <Footer />}
       </div>
     </Router>
   );

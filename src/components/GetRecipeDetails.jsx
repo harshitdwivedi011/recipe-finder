@@ -60,10 +60,7 @@ const GetRecipeDetails = () => {
                 </span>
               </>
             )}
-            <div
-              className="additional-infos"
-              style={{ backgroundColor: "#f9f9f9", borderRadius: "10px" }}
-            >
+            <div className="additional-infos" style={{ marginTop: "1rem" }}>
               <h1 className="dish-title">
                 Additional Information
                 <i
@@ -73,11 +70,8 @@ const GetRecipeDetails = () => {
                   }`}
                   style={{
                     cursor: "pointer",
-                    marginLeft: "10px",
-                    fontSize: "20px",
-                    backgroundColor: "#888",
-                    padding: "6px",
-                    borderRadius: "5px",
+                    marginLeft: "5px",
+                    fontSize: "17px",
                   }}
                   onClick={handleToggle}
                 ></i>
@@ -124,15 +118,13 @@ const GetRecipeDetails = () => {
           {similarRecipe && similarRecipe.length > 0 && (
             <div className="similar-recipes">
               <h1>Similar Recipes</h1>
-              <div className="similar-recipes-cards">
+              <div className="recipe-list">
                 {similarRecipe.map((recipe, index) => (
-                  <Link
-                    to={`/recipes/explore/${recipe.id}`}
-                    key={index}
-                    className="similar-recipe-link similar-recipe-card"
-                  >
-                    <img src={recipe.image} alt={recipe.title} />
-                    <h2>{recipe.title}</h2>
+                  <Link to={`/recipes/explore/${recipe.id}`} key={index}>
+                    <div className="recipe">
+                      <img src={recipe.image} alt={recipe.title} />
+                      <h3>{recipe.title}</h3>
+                    </div>
                   </Link>
                 ))}
               </div>
