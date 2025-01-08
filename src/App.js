@@ -31,16 +31,16 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <>
-                <ControlledCarousel />
-                {loading ? (
-                  <Loader />
-                ) : (
+        {loading ? (
+          <Loader />
+        ) : (
+          <>
+            <Routes>
+              <Route
+                path="/"
+                element={
                   <>
+                    <ControlledCarousel />
                     <Sections
                       config={ObjectUtils.Popularity}
                       recipeList={receipeListPopularity}
@@ -54,17 +54,23 @@ function App() {
                       recipeList={receipeListProtein}
                     />
                   </>
-                )}
-              </>
-            }
-          />
-          <Route path="/recipes/explore/:id" element={<GetRecipeDetails />} />
-          <Route path="/recipes/results/:query" element={<SearchResults />} />
-          <Route path="/popularity" element={<PopularRecipes />} />
-          <Route path="/healthiness" element={<HealthyRecipes />} />
-          <Route path="/protein" element={<ProteinRecipes />} />
-        </Routes>
-        {loading ? <Loader /> : <Footer />}
+                }
+              />
+              <Route
+                path="/recipes/explore/:id"
+                element={<GetRecipeDetails />}
+              />
+              <Route
+                path="/recipes/results/:query"
+                element={<SearchResults />}
+              />
+              <Route path="/popularity" element={<PopularRecipes />} />
+              <Route path="/healthiness" element={<HealthyRecipes />} />
+              <Route path="/protein" element={<ProteinRecipes />} />
+            </Routes>
+            <Footer />
+          </>
+        )}
       </div>
     </Router>
   );
